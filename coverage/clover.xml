@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1575749933422" clover="3.2.0">
+  <project timestamp="1575749933422" name="All files">
+    <metrics statements="11" coveredstatements="10" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="4" elements="25" coveredelements="22" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+    <file name="Slide.js" path="/Users/sander/Node/scrapbook/opposlide/classes/Slide.js">
+      <metrics statements="11" coveredstatements="10" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="4"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="19" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="25" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="5" type="stmt"/>
+      <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

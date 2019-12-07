@@ -1,13 +1,10 @@
 import { movieData } from './movies'
-import { Slide } from './classes/Slide'
-import { InteractionManager } from './classes/InteractionManager'
+// import { Slide } from './classes/Slide'
+// import { InteractionManager } from './classes/InteractionManager'
+import { Slider } from './classes/Slider'
 
 const slider = document.querySelector('.slider')
 
-movieData.forEach(movie => {
-  const slide = new Slide(movie).render()
+new Slider(slider, movieData)
 
-  slider.insertAdjacentHTML('beforeend', slide)
-})
-
-new InteractionManager(slider)
+// new InteractionManager(slider)

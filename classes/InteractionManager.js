@@ -22,37 +22,37 @@ export class InteractionManager {
    * Initializes the eventListeners to support interaction
    * @private
    * 
-   * @param {HTMLDivElement} element - Element the events should be applied to
+   * @param {HTMLElement} element - Element the events should be applied to
    */
   _initializeListeners(element) {
     this._listenForMovement(element)
   }
 
   _listenForMovement(element) {
-    element.addEventListener('mousedown', e => {
-      this._moveStart(e)
-      element.style.transform = `translateY(100px)`
-    })
-    element.addEventListener('touchstart', e => {
-      this._moveStart(e)
-    })
-    element.addEventListener('touchmove', e => {
-      if (this.currentState === USER_DRAGGING) {
-        const delta = this._anchorpoint.getDelta(e.changedTouches[0].screenX, e.changedTouches[0].screenY)
-        element.style.transform = `translateY(${delta}px)`
-      }
-    })
-    element.addEventListener('mouseup', e => {
-      if (this.currentState === USER_DRAGGING) {
-        this._setState(IDLE)
-      }
-    })
+    // element.addEventListener('mousedown', e => {
+    //   this._moveStart(e)
+    //   element.style.transform = `translateY(100px)`
+    // })
+    // element.addEventListener('touchstart', e => {
+    //   this._moveStart(e)
+    // })
+    // element.addEventListener('touchmove', e => {
+    //   if (this.currentState === USER_DRAGGING) {
+    //     const delta = this._anchorpoint.getDelta(e.changedTouches[0].screenX, e.changedTouches[0].screenY)
+    //     element.style.transform = `translateY(${delta}px)`
+    //   }
+    // })
+    // element.addEventListener('mouseup', e => {
+    //   if (this.currentState === USER_DRAGGING) {
+    //     this._setState(IDLE)
+    //   }
+    // })
   }
 
   _moveStart($event) {
-    this._setState(USER_DRAGGING)
-    this._anchorpoint.set($event.changedTouches[0].screenX, $event.changedTouches[0].screenY)
-    // this._anchorpoint.set($event.x, $event.y)
-    console.log($event)
+    // this._setState(USER_DRAGGING)
+    // this._anchorpoint.set($event.changedTouches[0].screenX, $event.changedTouches[0].screenY)
+    // // this._anchorpoint.set($event.x, $event.y)
+    // console.log($event)
   }
 }

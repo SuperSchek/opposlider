@@ -18,6 +18,7 @@ export class Point {
 
   /**
    * Get delta values relative to the anchorpoint
+   * @public
    * 
    * @param {number} x - Location of cursor on X-axis
    * @param {number} y - Location of cursor on Y-axis
@@ -26,7 +27,6 @@ export class Point {
    * @returns {Point}
    */
   getDelta(x, y, absolute = false) {
-    console.log(y)
     const deltaX = this.x - x
     const deltaY = this.y - y
 
