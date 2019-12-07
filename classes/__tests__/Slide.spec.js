@@ -10,6 +10,20 @@ function fakeSlide(content = '<div><span>Hello world!</span></div>', index = 0) 
 }
 
 describe('Slide class', () => {
+  describe('Creating new instance', () => {
+    it('initializeSlide', () => {
+      // Assign
+      const slide = fakeSlide()
+      const content = faker.lorem.text()
+      slide.render = jest.fn()
+  
+      // Act
+      slide.initializeSlide(content)
+  
+      // Assert
+      expect(slide.render).toHaveBeenCalledWith(content)
+    })
+  })
   describe('setValue', () => {
     it('Sets value', () => {
       // Assign
