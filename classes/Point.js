@@ -26,6 +26,7 @@ export class Point {
    * @returns {Point}
    */
   getDelta(x, y, absolute = false) {
+    console.log(y)
     const deltaX = this.x - x
     const deltaY = this.y - y
 
