@@ -1,5 +1,8 @@
-export class Slide {
-  constructor(index) {
+import { Base } from './Base'
+
+export class Slide extends Base {
+  constructor() {
+    super()
     this._activeSlideIndex = null
     this._slideIndex = null
     this._slide = null
@@ -17,18 +20,8 @@ export class Slide {
    */
   render(content, active = false) {
     return `<div class="oppo-slide" ${active ? 'data-active="true"' : ''}>
-      ${content}
+      ${content.outerHTML}
     </div>`
-  }
-  
-  setValue(key, value) {
-    if (key in this && value !== undefined) {
-      this[key] = value
-    } else if (value === undefined) {
-      throw new Error('setValue: no value was passed')
-    } else {
-      throw new ReferenceError(`setValue: ${key} is not declared in the ${this.constructor.name} constructor and cannot be assigned.`)
-    }
   }
 
   /**

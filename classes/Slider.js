@@ -1,7 +1,5 @@
 import { Slide } from './Slide'
 
-class DataError extends Error {}
-
 export class Slider {
   constructor(element, data) {
     this._activeSlideIndex = 0
@@ -16,6 +14,7 @@ export class Slider {
       throw new Error('this._element is should be of type: HTMLElement')
 
     this._slides = this._getSlides()
+    this._setActiveSlideIndex(this._activeSlideIndex)
 
     console.log(this._slides)
 
@@ -49,9 +48,14 @@ export class Slider {
       const slide = new Slide()
       slide.initializeSlide(content)
       slide.setValue('_slideIndex', i)
+      content.outerHTML = slide._slide
       slideInstances.push(slide)
     }
 
     return slideInstances
+  }
+
+  _setActiveSlideIndex() {
+    // 
   }
 }
